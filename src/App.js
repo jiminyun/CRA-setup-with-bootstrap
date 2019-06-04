@@ -11,10 +11,17 @@ import Default from "./pages/Default";
 
 import { Route, Switch } from "react-router-dom";
 
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import SideCart from "./components/SideCart";
+import Footer from "./components/Footer";
+
 const App = () => {
   return (
     <>
-      {/* navbar, sidebar */}
+      <Navbar />
+      <Sidebar />
+      <SideCart />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/cart" component={Cart} />
@@ -23,6 +30,7 @@ const App = () => {
         <Route path="/about" component={About} />
         <Route component={Default} />
       </Switch>
+      <Footer />
     </>
   );
 };
